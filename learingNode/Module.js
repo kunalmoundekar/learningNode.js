@@ -9,10 +9,10 @@ function sub(a,b) {
 
 
 const operation ={
-    addFn: add,
-    subFn:sub
+    add,
+    sub
 }
-exports = add1 = (a ,b)=>a+b
-exports = sub1 = (a ,b)=>a-b
+
 
 module.exports = operation
+
