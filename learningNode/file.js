@@ -19,14 +19,16 @@ const fs = require("fs")
 //  })
 
 
-fs.appendFileSync("./test.txt", new Date().getDate().toLocaleString())
+// fs.appendFileSync("./test.txt", new Date().getDate().toLocaleString())
 
-fs.cpSync("./test.txt", "./cpTest.txt")
+// fs.cpSync("./test.txt", "./cpTest.txt")
 
-fs.unlinkSync("./cpTest.txt")
+// fs.unlinkSync("./cpTest.txt")
 // const res = fs.statSync("./test.txt").isFile()
 // const res = fs.statSync("./test.txt")
 
-fs.mkdirSync("my-doc/folderA/folderB",{ recursive: true })
+// fs.mkdirSync("my-doc/folderA/folderB",{ recursive: true })
 
-// console.log(res)
+const os =require("os")
+
+console.log(os.cpus().length)

@@ -8,6 +8,6 @@ console.log(`add = ${add(2,5)},sub = ${sub(2,5)},mul = ${mul(2,2)}`  )
 
 
 
-
+  
       
 
