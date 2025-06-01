@@ -1,3 +1,11 @@
-1748702934910  /search?search_query=javascript_tic+tac+toe: New req Received
-1748703044680  /about?myname=kunal&userId=1&serch=dog: New req Received
-1748703065709  /about?myname=john&userId=1&serch=dog: New req Received
+ 1748788933896:GET  /: New req Received
+1748788993610:GET  /: New req Received
+1748788999446:GET  /about: New req Received
+1748789077930:GET  /about: New req Received
+1748789079548:GET  /about: New req Received
+1748789225460:GET  /about: New req Received
+1748789231697:GET  /: New req Received
+1748789471531:GET  /singup: New req Received
+1748789486318:GET  /singup: New req Received
+1748789572797:GET  /singup: New req Received
+1748789608571:GET  /singup: New req Received
