@@ -1,52 +1,56 @@
 const http = require("http")
-const fs =require("fs")
-const url =require("url")
+const fs = require("fs")
+const url = require("url")
 
-const myServer  = http.createServer((req,res)=>{
 
-    if (req.url ==="/favicon.ico")return res.end()
 
+function myHandler(req, res) {
+    if (req.url === "/favicon.ico") return res.end()
+ 
     const log = `${Date.now()}:${req.method}  ${req.url}: New req Received\n`
 
-    const myUrl=url.parse(req.url ,true)
+    const myUrl = url.parse(req.url, true)
     console.log(myUrl)
+ 
+    fs.appendFile('log.txt', log, (err, data) => {
 
-    fs.appendFile('log.txt',log,(err,data)=>{
-
-        switch(myUrl.pathname){
-
-           
-          
-
-
+        switch (myUrl.pathname) {
             case '/':
-                 if (req.method === "GET") res.end("Home page");
-            break
+                if (req.method === "GET") res.end("Home page");
+                break
             case '/about':
-                const username =  myUrl.query.myname
+                const username = myUrl.query.myname
                 res.end(`Hii, ${username} `)
-            break;
+                break;
             case '/search':
                 const search = myUrl.query.search_query
-                res.end("Here are your results for "+ search)
-                  break;
+                res.end("Here are your results for " + search)
+                break;
+ 
+            case "/singup":
+                if (req.method === 'GET') res.end("This Is a Singup Form")
+                else if (req.method === "POST") {
+                    // DB query
+                    res.end("Success")
+                }
 
-                  case"/singup":
-                  if(req.method === 'GET')res.end("This Is a Singup Form")
-                    else if(req.method === "POST"){
-                // DB query
-                res.end("Success")
-            }
 
+                
 
             default:
                 res.end("404 Not Found")
         }
     })
-})
- 
+}
 
-myServer.listen( 8000, ()=>{
+
+const myServer = http.createServer(myHandler)
+
+
+
+
+
+myServer.listen(8000, () => {
     console.log("server started !")
 })
 
