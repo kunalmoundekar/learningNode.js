@@ -1,0 +1,28 @@
+🌟 Note of verstion 🌟
+
+^4.18.2
+
+4 → Major version4
+18 → Minor version
+2 → Patch version
+
+1rd Part (Frist Part) (4) -    Major version4
+
+2rd Part (Second Part) (18) - Recommeneded Bug Fix
+
+3rd Part (Last Part) (2) - minore fixes latest verstion of express (4.18.2)
+
+
+
+🌟 RESTful API 🌟
+(SSR)server side rendering
+REST → Representational State Transfer
+It’s an architecture style for designing web APIs.
+
+A RESTful API is an API that follows the REST principles to let clients (like frontend apps or mobile apps) communicate with a server over HTTP.
+
+🌟 Http Methods
+[get ,post , put, patch delete]
+get/user - users data read and return data
+post/user - handle new user creation
+patch/user - update user   
