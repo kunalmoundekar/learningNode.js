@@ -12,6 +12,7 @@ function myHandler(req, res) {
     const myUrl = url.parse(req.url, true)
     console.log(myUrl)
  
+    
     fs.appendFile('log.txt', log, (err, data) => {
 
         switch (myUrl.pathname) {
@@ -45,9 +46,6 @@ function myHandler(req, res) {
 
 
 const myServer = http.createServer(myHandler)
-
-
-
 
 
 myServer.listen(8000, () => {
